@@ -19,13 +19,24 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRouter);
+app.use('/documentation', indexRouter);
 app.use('/users', usersRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
 });
+
+const MongoClient = require('mongodb').MongoClient;
+const uri = "";
+MongoClient.connect(uri, (err, client) => {
+  app.post('/api/v1/addAnime', (req, res) => {
+    db.colletion('data').save(req.body, (err, result) => {
+      if( err ) return console.log(err)
+      console.log('anime_add_sucess')
+    })
+  })
+})
 
 // error handler
 app.use(function(err, req, res, next) {
@@ -39,3 +50,6 @@ app.use(function(err, req, res, next) {
 });
 
 module.exports = app;
+
+
+

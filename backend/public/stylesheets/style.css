@@ -6,3 +6,46 @@ body {
 a {
   color: #00B7FF;
 }
+
+body{
+  background: #151515;
+}
+
+h1{
+  font-size: 1.8rem;
+}
+
+p{
+  font-size: 1.2rem;
+}
+
+header{
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  position: fixed;
+  background-color: #000;
+  left: 0px;
+  top: 0px;
+  z-index: 1000;
+}
+
+header h1{
+  color: #f77d00;
+  position: absolute;
+  left: 115px;
+  top: 10px;
+}
+
+header img{
+  width: 100px;
+}
+
+div{
+  position: relative;
+  margin: 0px auto;
+  max-width: 800px;
+  background: #fff;
+  border-radius: 5px;
+  padding: 20px;
+}

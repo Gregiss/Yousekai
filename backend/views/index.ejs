@@ -1,11 +1,42 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
+    <title>Yousekai</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <header>
+    <img src="/images/logo.svg" alt="">
+    <h1>DEV</h1>
+    </header>
+    <div>
+      <h1>Documentação</h1>
+      <p>Documentação sobre a api Yousekai.</p>
+      <h2>Listar animes por páginas</h2>
+      <p>Usando para listar 20 animes por página</p>
+      <p>'URL' : '/api/v1/list_anime'</p>
+      <p>Você terá que passar por POST a página</p>
+      <p>INT: page</p>
+      <hr>
+      <h2>Listar animes por ID</h2>
+      <p>Usando para listar somente um unico anime</p>
+      <p>'URL' : '/api/v1/view_anime'</p>
+      <p>Você terá que passar por POST a ID</p>
+      <p>INT: anime_id</p>
+      <hr>
+      <h2>Inserir animes usando method POST</h2>
+      <p>'URL' : '/api/v1/addAnime'</p>
+      <p>Passando por POST</p>
+      <p>STRING: name_anime,
+        <p>STRING: sinopse</p>
+        <p>STRING: cover_anime,</p>
+        <p>STRING: imagem_anime</p>
+        <p>STRING: autor,</p>
+        <p>STRING: studio,</p>
+        <p>STRING: cover_anime,</p>
+        <p>INT: total_episodio,</p>
+        <p>INT: total_season</p>
+    </div>
+
   </body>
 </html>
